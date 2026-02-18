@@ -1,10 +1,20 @@
 @import "tailwindcss";
 
+/* Middle Door Homes palette (deck-like: light blue/gray + deep ink) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --mdh-bg: #f3f6f7;
+  --mdh-ink: #0f1720;
+  --mdh-subtle: #334155;
+  --mdh-muted: #5b6b7c;
+  --mdh-line: #d7e1e8;
+  --mdh-accent: #2b5d73;
+
+  /* Keep generic tokens too (some tooling expects these) */
+  --background: var(--mdh-bg);
+  --foreground: var(--mdh-ink);
 }
 
+/* Tell Tailwind theme tokens what “background/foreground” mean */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,15 +22,24 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Important: for an institutional site, do NOT flip to dark mode automatically.
+   We keep colors consistent. (You can add a dark theme later if you want.) */
+/* @media (prefers-color-scheme: dark) { ... }  <-- remove */
+
+/* Global base */
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--mdh-bg);
+  color: var(--mdh-ink);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+/* Optional: nicer selection */
+::selection {
+  background: rgba(43, 93, 115, 0.18);
 }
