@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
+import { TeamHoverGrid } from "@/components/team-hover-grid";
 
 export const metadata: Metadata = {
   title: "Team",
@@ -39,20 +40,20 @@ const TEAM = [
 export default function TeamPage() {
   return (
     <main>
-      <Section className="pb-8 pt-10 md:pt-12">
+      <Section className="pb-6 pt-7 md:pt-10">
         <Container>
-          <div className="grid gap-7 lg:grid-cols-[1fr_420px] lg:items-end">
+          <div className="grid gap-6 lg:grid-cols-[1fr_420px] lg:items-end">
             <div>
               <Eyebrow>Leadership</Eyebrow>
               <Heading className="mt-3">Team</Heading>
               <Lead>
-                Institutional scattered-site operating experience across acquisitions, asset management,
-                finance, and data science.
+                Deep execution experience across acquisitions, operations, capital markets, and data
+                science in scattered-site housing.
               </Lead>
             </div>
-            <div className="relative h-[300px] overflow-hidden rounded-xl border border-[var(--mdh-line)]">
+            <div className="relative h-[290px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)]">
               <Image
-                src="/images/bldg-15.jpg"
+                src="/images/bldg-13.jpg"
                 alt="Small multifamily neighborhood context"
                 fill
                 quality={90}
@@ -64,23 +65,9 @@ export default function TeamPage() {
         </Container>
       </Section>
 
-      <Section className="pt-1">
+      <Section className="pt-4">
         <Container>
-          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white/45 p-6 md:p-8">
-            <div className="grid gap-6 md:grid-cols-2">
-              {TEAM.map((member) => (
-                <article key={member.name} className="grid gap-4 border-t border-[var(--mdh-line)] pt-5 md:grid-cols-[128px_1fr]">
-                  <div className="relative h-32 w-32 overflow-hidden rounded-xl border border-[var(--mdh-line)]">
-                    <Image src={member.image} alt={member.name} fill sizes="128px" className="object-cover" />
-                  </div>
-                  <div>
-                    <h2 className="text-2xl font-medium tracking-tight text-[var(--mdh-title)]">{member.name}</h2>
-                    <p className="mt-3 max-w-[55ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">{member.bio}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
+          <TeamHoverGrid team={TEAM} />
         </Container>
       </Section>
     </main>

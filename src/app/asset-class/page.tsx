@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function AssetClassPage() {
   return (
     <main>
-      <Section className="pb-8 pt-10 md:pt-12">
+      <Section className="pb-6 pt-7 md:pt-10">
         <Container>
           <Eyebrow>Asset Class</Eyebrow>
           <h1 className="mt-4 max-w-4xl text-4xl font-medium tracking-tight text-[var(--mdh-title)] md:text-5xl">
@@ -25,10 +25,10 @@ export default function AssetClassPage() {
         </Container>
       </Section>
 
-      <Section className="py-0">
+      <Section className="py-2">
         <Container>
           <div className="grid gap-3 md:grid-cols-[1fr_320px]">
-            <div className="relative h-[300px] overflow-hidden rounded-xl border border-[var(--mdh-line)] md:h-[420px]">
+            <div className="relative h-[300px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:h-[420px]">
               <Image
                 src="/images/bldg-13.jpg"
                 alt="Small multifamily building stock"
@@ -39,7 +39,7 @@ export default function AssetClassPage() {
                 className="object-cover object-[center_50%]"
               />
             </div>
-            <div className="relative h-48 overflow-hidden rounded-xl border border-[var(--mdh-line)] md:h-[420px]">
+            <div className="relative h-48 overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:h-[420px]">
               <Image
                 src="/images/bldg-15.jpg"
                 alt="Infill multifamily properties"
@@ -53,10 +53,10 @@ export default function AssetClassPage() {
         </Container>
       </Section>
 
-      <Section className="pt-8">
+      <Section className="pt-5">
         <Container>
           <Heading>Return profile and downside framing</Heading>
-          <div className="mt-5 rounded-2xl border border-[var(--mdh-line)] bg-white/45 p-6 md:p-8">
+          <div className="mt-5 rounded-2xl border border-[var(--mdh-line)] bg-white/55 p-6 shadow-[0_10px_28px_rgba(18,29,41,0.05)] md:p-8">
             <div className="max-w-[70ch] space-y-3 text-[0.98rem] leading-relaxed text-[var(--mdh-ink)] md:text-[1.05rem]">
               <p>
                 Strategy targets 5-7%+ stabilized cash yield, building toward 8-11%+ base-case organic

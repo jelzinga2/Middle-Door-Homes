@@ -8,7 +8,7 @@ type ClassName = {
 
 export function Container({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <div className={`mx-auto w-full max-w-7xl px-5 md:px-8 ${className ?? ""}`.trim()}>
+    <div className={`mx-auto w-full max-w-7xl px-5 md:px-7 lg:px-8 ${className ?? ""}`.trim()}>
       {children}
     </div>
   );
@@ -20,7 +20,7 @@ export function Section({
   id,
 }: ClassName & { children: ReactNode; id?: string }) {
   return (
-    <section id={id} className={`py-10 md:py-14 ${className ?? ""}`.trim()}>
+    <section id={id} className={`py-8 md:py-12 ${className ?? ""}`.trim()}>
       {children}
     </section>
   );
@@ -28,7 +28,7 @@ export function Section({
 
 export function Heading({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <h2 className={`text-3xl font-medium leading-tight tracking-[-0.01em] text-[var(--mdh-title)] md:text-4xl ${className ?? ""}`.trim()}>
+    <h2 className={`text-[1.95rem] font-medium leading-[1.1] tracking-[-0.012em] text-[var(--mdh-title)] md:text-[2.35rem] lg:text-[2.55rem] ${className ?? ""}`.trim()}>
       {children}
     </h2>
   );
@@ -36,7 +36,7 @@ export function Heading({ className, children }: ClassName & { children: ReactNo
 
 export function Eyebrow({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <p className={`text-xs font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)] ${className ?? ""}`.trim()}>
+    <p className={`text-[0.68rem] font-medium uppercase tracking-[0.18em] text-[var(--mdh-subtle)] md:text-[0.72rem] ${className ?? ""}`.trim()}>
       {children}
     </p>
   );
@@ -44,7 +44,7 @@ export function Eyebrow({ className, children }: ClassName & { children: ReactNo
 
 export function Subheading({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <p className={`mt-4 max-w-3xl text-base leading-relaxed text-[var(--mdh-muted)] md:text-lg ${className ?? ""}`.trim()}>
+    <p className={`mt-4 max-w-[66ch] text-[0.99rem] leading-relaxed text-[var(--mdh-muted)] md:text-[1.06rem] ${className ?? ""}`.trim()}>
       {children}
     </p>
   );
@@ -52,7 +52,7 @@ export function Subheading({ className, children }: ClassName & { children: Reac
 
 export function Lead({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <p className={`mt-5 max-w-[65ch] text-lg leading-relaxed text-[var(--mdh-ink)] md:text-xl ${className ?? ""}`.trim()}>
+    <p className={`mt-4 max-w-[62ch] text-[1.04rem] leading-[1.62] text-[var(--mdh-ink)] md:text-[1.2rem] ${className ?? ""}`.trim()}>
       {children}
     </p>
   );
@@ -60,7 +60,7 @@ export function Lead({ className, children }: ClassName & { children: ReactNode 
 
 export function Card({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <div className={`rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-surface)] p-5 shadow-[0_8px_22px_rgba(23,33,43,0.04)] md:p-6 ${className ?? ""}`.trim()}>
+    <div className={`rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-surface)] p-5 shadow-[0_10px_26px_rgba(23,33,43,0.035)] md:p-6 ${className ?? ""}`.trim()}>
       {children}
     </div>
   );

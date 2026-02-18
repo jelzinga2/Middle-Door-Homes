@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main>
-      <Section className="pb-8 pt-10 md:pt-12">
+      <Section className="pb-6 pt-7 md:pt-10">
         <Container>
           <div className="grid gap-7 lg:grid-cols-[1fr_380px] lg:items-end">
             <div>
@@ -27,7 +27,7 @@ export default function ContactPage() {
                 .
               </Lead>
             </div>
-            <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)]">
+            <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)] shadow-[0_10px_28px_rgba(18,29,41,0.05)]">
               <Image
                 src="/images/bldg-02.jpg"
                 alt="Institutional quality multifamily exterior"
