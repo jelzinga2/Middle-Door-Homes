@@ -2,7 +2,7 @@
 
 Production-ready institutional marketing site for Middle Door Homes using Next.js App Router, TypeScript, and Tailwind CSS.
 
-## Stack
+## Stack 
 
 - Next.js (App Router)
 - TypeScript
