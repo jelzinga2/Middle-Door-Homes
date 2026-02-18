@@ -32,7 +32,13 @@ export default function ContactPage() {
               </Card>
             </div>
             <div className="relative h-44 overflow-hidden rounded-2xl border border-[var(--mdh-line)] md:h-52">
-              <Image src="/images/bldg-12.jpg" alt="Multifamily asset exterior" fill className="object-cover" />
+              <Image
+                src="/images/bldg-02.jpg"
+                alt="Multifamily asset exterior"
+                fill
+                quality={90}
+                className="object-cover object-[center_46%]"
+              />
             </div>
           </div>
         </Container>

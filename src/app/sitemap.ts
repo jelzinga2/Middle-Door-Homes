@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://www.middledoorhomes.com";
   const now = new Date();
-  const routes = ["/", "/about", "/team", "/investor-login", "/contact"];
+  const routes = ["/", "/about", "/asset-class", "/team", "/investor-login", "/contact"];
 
   return routes.map((route) => ({
     url: `${base}${route}`,

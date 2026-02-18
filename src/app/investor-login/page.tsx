@@ -25,13 +25,31 @@ export default function InvestorLoginPage() {
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               <div className="relative h-44 overflow-hidden rounded-2xl border border-[var(--mdh-line)] sm:col-span-2 md:h-56">
-                <Image src="/images/bldg-04.jpg" alt="Multifamily property exterior" fill className="object-cover" />
+                <Image
+                  src="/images/bldg-04.jpg"
+                  alt="Multifamily property exterior"
+                  fill
+                  quality={90}
+                  className="object-cover object-[center_44%]"
+                />
               </div>
               <div className="relative h-32 overflow-hidden rounded-2xl border border-[var(--mdh-line)] md:h-40">
-                <Image src="/images/bldg-08.jpg" alt="Small multifamily asset" fill className="object-cover" />
+                <Image
+                  src="/images/bldg-06.jpg"
+                  alt="Small multifamily asset"
+                  fill
+                  quality={90}
+                  className="object-cover object-[center_50%]"
+                />
               </div>
               <div className="relative h-32 overflow-hidden rounded-2xl border border-[var(--mdh-line)] md:h-40">
-                <Image src="/images/bldg-09.jpg" alt="Neighborhood building stock" fill className="object-cover" />
+                <Image
+                  src="/images/bldg-05.jpg"
+                  alt="Neighborhood building stock"
+                  fill
+                  quality={90}
+                  className="object-cover object-[center_45%]"
+                />
               </div>
             </div>
           </div>

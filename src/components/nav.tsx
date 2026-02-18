@@ -8,8 +8,8 @@ import { Container } from "./ui";
 
 const LINKS = [
   { href: "/about", label: "About" },
+  { href: "/asset-class", label: "Asset Class" },
   { href: "/team", label: "Team" },
-  { href: "/investor-login", label: "Investor Login" },
   { href: "/contact", label: "Contact Us" },
 ];
 
@@ -21,9 +21,9 @@ export function Nav() {
     <header className="sticky top-0 z-50 border-b border-[var(--mdh-line)] bg-white/95 backdrop-blur">
       <Container className="py-4">
         <div className="flex items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-3" aria-label="Middle Door Homes home">
-            <Image src="/images/Logo.png" alt="Middle Door Homes" width={30} height={30} priority />
-            <span className="text-sm font-semibold tracking-tight text-[var(--mdh-title)] md:text-[1rem]">
+          <Link href="/" className="flex items-center gap-3.5" aria-label="Middle Door Homes home">
+            <Image src="/images/Logo.png" alt="Middle Door Homes" width={38} height={38} priority />
+            <span className="text-base font-semibold tracking-tight text-[var(--mdh-title)]">
               Middle Door Homes
             </span>
           </Link>
@@ -43,13 +43,19 @@ export function Nav() {
             })}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden items-center gap-4 md:flex">
             <a
               href="mailto:info@middledoorhomes.com"
               className="text-xs font-medium text-[var(--mdh-subtle)] transition hover:text-[var(--mdh-title)] md:text-sm"
             >
               info@middledoorhomes.com
             </a>
+            <Link
+              href="/investor-login"
+              className="rounded-full border border-[var(--mdh-line)] px-3 py-1 text-xs font-medium text-[var(--mdh-subtle)] hover:text-[var(--mdh-title)]"
+            >
+              Investor Login
+            </Link>
           </div>
 
           <button
@@ -89,6 +95,13 @@ export function Nav() {
             >
               info@middledoorhomes.com
             </a>
+            <Link
+              href="/investor-login"
+              onClick={() => setOpen(false)}
+              className="mt-3 inline-block text-sm font-medium text-[var(--mdh-subtle)]"
+            >
+              Investor Login
+            </Link>
           </Container>
         </div>
       ) : null}
