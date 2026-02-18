@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Card, Container, Eyebrow, Section } from "@/components/ui";
+import { Card, Container, Eyebrow, Heading, Section } from "@/components/ui";
 import { InvestorLoginForm } from "@/components/investor-login-form";
 
 export const metadata: Metadata = {
@@ -11,47 +11,45 @@ export const metadata: Metadata = {
 export default function InvestorLoginPage() {
   return (
     <main>
-      <Section className="pt-10">
+      <Section className="pb-10 pt-12 md:pt-16">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,460px)_1fr]">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,480px)_1fr] lg:items-start">
             <div>
               <Eyebrow>Investor Access</Eyebrow>
-              <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--mdh-title)] md:text-[3.1rem]">
-                Investor Login
-              </h1>
+              <Heading className="mt-3">Investor Login</Heading>
               <Card className="mt-6">
                 <InvestorLoginForm />
               </Card>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
-              <div className="relative h-44 overflow-hidden rounded-2xl border border-[var(--mdh-line)] sm:col-span-2 md:h-56">
+              <div className="relative h-48 overflow-hidden rounded-xl border border-[var(--mdh-line)] sm:col-span-2 md:h-64">
                 <Image
-                  src="/images/bldg-04.jpg"
-                  alt="Multifamily property exterior"
+                  src="/images/bldg-13.jpg"
+                  alt="Portfolio multifamily exterior"
                   fill
-                  quality={90}
+                  quality={92}
                   sizes="100vw"
-                  className="object-cover object-[center_44%]"
-                />
-              </div>
-              <div className="relative h-32 overflow-hidden rounded-2xl border border-[var(--mdh-line)] md:h-40">
-                <Image
-                  src="/images/bldg-06.jpg"
-                  alt="Small multifamily asset"
-                  fill
-                  quality={90}
-                  sizes="50vw"
                   className="object-cover object-[center_50%]"
                 />
               </div>
-              <div className="relative h-32 overflow-hidden rounded-2xl border border-[var(--mdh-line)] md:h-40">
+              <div className="relative h-36 overflow-hidden rounded-xl border border-[var(--mdh-line)] md:h-44">
                 <Image
-                  src="/images/bldg-05.jpg"
-                  alt="Neighborhood building stock"
+                  src="/images/bldg-10.jpg"
+                  alt="Urban multifamily stock"
                   fill
                   quality={90}
                   sizes="50vw"
-                  className="object-cover object-[center_45%]"
+                  className="object-cover object-[center_62%]"
+                />
+              </div>
+              <div className="relative h-36 overflow-hidden rounded-xl border border-[var(--mdh-line)] md:h-44">
+                <Image
+                  src="/images/bldg-15.jpg"
+                  alt="Neighborhood multifamily context"
+                  fill
+                  quality={90}
+                  sizes="50vw"
+                  className="object-cover object-[center_44%]"
                 />
               </div>
             </div>

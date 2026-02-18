@@ -23,7 +23,7 @@ export function Nav() {
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3.5" aria-label="Middle Door Homes home">
             <Image src="/images/Logo.png" alt="Middle Door Homes" width={38} height={38} priority />
-            <span className="text-base font-semibold tracking-tight text-[var(--mdh-title)]">
+            <span className="text-base font-medium tracking-tight text-[var(--mdh-title)]">
               Middle Door Homes
             </span>
           </Link>
@@ -35,7 +35,7 @@ export function Nav() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`transition hover:text-[var(--mdh-title)] ${active ? "font-semibold text-[var(--mdh-title)]" : "text-[var(--mdh-subtle)]"}`}
+                  className={`transition hover:text-[var(--mdh-title)] ${active ? "font-medium text-[var(--mdh-title)]" : "text-[var(--mdh-subtle)]"}`}
                 >
                   {link.label}
                 </Link>

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/bldg-01.jpg",
+        url: "/images/bldg-13.jpg",
         width: 1200,
         height: 630,
         alt: "Small multifamily building",

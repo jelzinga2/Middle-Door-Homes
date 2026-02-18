@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Container, Eyebrow, Section } from "@/components/ui";
+import { Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Team",
@@ -39,46 +39,42 @@ const TEAM = [
 export default function TeamPage() {
   return (
     <main>
-      <section className="border-b border-[var(--mdh-line)]">
-        <div className="relative h-44 w-full overflow-hidden md:h-56">
-          <Image
-            src="/images/bldg-11.jpg"
-            alt="Scattered-site housing streetscape"
-            fill
-            priority
-            quality={90}
-            sizes="100vw"
-            className="object-cover object-[center_38%]"
-          />
-        </div>
-      </section>
-
-      <Section className="pb-8 pt-10">
+      <Section className="pb-10 pt-12 md:pt-16">
         <Container>
-          <Eyebrow>Leadership</Eyebrow>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--mdh-title)] md:text-5xl">
-            Team
-          </h1>
-          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-[var(--mdh-ink)]">
-            Deep experience in institutional scattered-site housing, platform scaling, and AI/data
-            science.
-          </p>
+          <div className="grid gap-10 lg:grid-cols-[1fr_420px] lg:items-end">
+            <div>
+              <Eyebrow>Leadership</Eyebrow>
+              <Heading className="mt-3">Team</Heading>
+              <Lead>
+                Institutional scattered-site operating experience across acquisitions, asset management,
+                finance, and data science.
+              </Lead>
+            </div>
+            <div className="relative h-[300px] overflow-hidden rounded-xl border border-[var(--mdh-line)]">
+              <Image
+                src="/images/bldg-15.jpg"
+                alt="Small multifamily neighborhood context"
+                fill
+                quality={90}
+                sizes="(min-width: 1024px) 420px, 100vw"
+                className="object-cover object-[center_50%]"
+              />
+            </div>
+          </div>
         </Container>
       </Section>
 
       <Section className="pt-0">
         <Container>
-          <div className="divide-y divide-[var(--mdh-line)] border-y border-[var(--mdh-line)]">
+          <div className="grid gap-8 md:grid-cols-2">
             {TEAM.map((member) => (
-              <article key={member.name} className="grid gap-6 py-8 md:grid-cols-[180px_1fr] md:items-center">
-                <div className="relative h-44 w-44 overflow-hidden rounded-xl border border-[var(--mdh-line)]">
-                  <Image src={member.image} alt={member.name} fill sizes="176px" className="object-cover" />
+              <article key={member.name} className="grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-[128px_1fr]">
+                <div className="relative h-32 w-32 overflow-hidden rounded-xl border border-[var(--mdh-line)]">
+                  <Image src={member.image} alt={member.name} fill sizes="128px" className="object-cover" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-semibold text-[var(--mdh-title)]">{member.name}</h2>
-                  <p className="mt-3 max-w-3xl text-[0.98rem] leading-relaxed text-[var(--mdh-ink)]">
-                    {member.bio}
-                  </p>
+                  <h2 className="text-2xl font-medium tracking-tight text-[var(--mdh-title)]">{member.name}</h2>
+                  <p className="mt-3 max-w-[55ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">{member.bio}</p>
                 </div>
               </article>
             ))}

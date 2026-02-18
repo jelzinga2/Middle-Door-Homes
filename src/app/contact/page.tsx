@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Card, Container, Eyebrow, Section } from "@/components/ui";
+import { Container, Eyebrow, Heading, Lead, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -10,34 +10,30 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main>
-      <Section className="pt-10">
+      <Section className="pb-10 pt-12 md:pt-16">
         <Container>
-          <div className="grid gap-8 lg:grid-cols-[1fr_340px]">
+          <div className="grid gap-10 lg:grid-cols-[1fr_380px] lg:items-end">
             <div>
               <Eyebrow>Contact</Eyebrow>
-              <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--mdh-title)] md:text-[3.1rem]">
-                Contact Us
-              </h1>
-              <Card className="mt-6">
-                <p className="text-base leading-relaxed text-[var(--mdh-ink)] md:text-lg">
-                  For inquiries, contact us at{" "}
-                  <a
-                    href="mailto:info@middledoorhomes.com"
-                    className="font-semibold text-[var(--mdh-title)] underline-offset-2 hover:underline"
-                  >
-                    info@middledoorhomes.com
-                  </a>
-                  .
-                </p>
-              </Card>
+              <Heading className="mt-3">Contact Us</Heading>
+              <Lead>
+                For institutional inquiries, contact{" "}
+                <a
+                  href="mailto:info@middledoorhomes.com"
+                  className="font-medium text-[var(--mdh-title)] underline-offset-2 hover:underline"
+                >
+                  info@middledoorhomes.com
+                </a>
+                .
+              </Lead>
             </div>
-            <div className="relative h-44 overflow-hidden rounded-2xl border border-[var(--mdh-line)] md:h-52">
+            <div className="relative h-[280px] overflow-hidden rounded-xl border border-[var(--mdh-line)]">
               <Image
                 src="/images/bldg-02.jpg"
-                alt="Multifamily asset exterior"
+                alt="Institutional quality multifamily exterior"
                 fill
                 quality={90}
-                sizes="(min-width: 1024px) 340px, 100vw"
+                sizes="(min-width: 1024px) 380px, 100vw"
                 className="object-cover object-[center_46%]"
               />
             </div>
