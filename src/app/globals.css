@@ -1,32 +1,25 @@
 @import "tailwindcss";
 
-/* Middle Door Homes palette (deck-like: light blue/gray + deep ink) */
 :root {
-  --mdh-bg: #f3f6f7;
-  --mdh-ink: #0f1720;
-  --mdh-subtle: #334155;
-  --mdh-muted: #5b6b7c;
-  --mdh-line: #d7e1e8;
-  --mdh-accent: #2b5d73;
-
-  /* Keep generic tokens too (some tooling expects these) */
+  --mdh-bg: #f7f8f7;
+  --mdh-surface: #ffffff;
+  --mdh-ink: #111827;
+  --mdh-ink-soft: #1f2937;
+  --mdh-subtle: #374151;
+  --mdh-muted: #5b6472;
+  --mdh-line: #dde3ea;
+  --mdh-accent: #20374c;
   --background: var(--mdh-bg);
   --foreground: var(--mdh-ink);
 }
 
-/* Tell Tailwind theme tokens what “background/foreground” mean */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-newsreader);
 }
 
-/* Important: for an institutional site, do NOT flip to dark mode automatically.
-   We keep colors consistent. (You can add a dark theme later if you want.) */
-/* @media (prefers-color-scheme: dark) { ... }  <-- remove */
-
-/* Global base */
 html,
 body {
   height: 100%;
@@ -35,11 +28,32 @@ body {
 body {
   background: var(--mdh-bg);
   color: var(--mdh-ink);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, Segoe UI, Roboto,
-    Helvetica, Arial, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
-/* Optional: nicer selection */
+a,
+button,
+input {
+  transition: color 140ms ease, background-color 140ms ease, border-color 140ms ease,
+    box-shadow 140ms ease, opacity 140ms ease;
+}
+
+:focus-visible {
+  outline: 2px solid var(--mdh-accent);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 ::selection {
-  background: rgba(43, 93, 115, 0.18);
+  background: rgba(32, 55, 76, 0.18);
 }

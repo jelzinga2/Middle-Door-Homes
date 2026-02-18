@@ -1,0 +1,14 @@
+import type { MetadataRoute } from "next";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const base = "https://www.middledoorhomes.com";
+  const now = new Date();
+  const routes = ["/", "/about", "/asset-class", "/team", "/investor-login", "/contact"];
+
+  return routes.map((route) => ({
+    url: `${base}${route}`,
+    lastModified: now,
+    changeFrequency: route === "/" ? "weekly" : "monthly",
+    priority: route === "/" ? 1 : 0.7,
+  }));
+}

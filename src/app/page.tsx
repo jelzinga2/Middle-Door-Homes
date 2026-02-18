@@ -1,125 +1,107 @@
+import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { Button, Card, Container, Divider, Heading, Section, Stat, Subheading } from "@/components/ui";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Middle Door Homes is building an institutional small multifamily platform focused on durable yield, downside protection, and long-term compounding.",
+};
+
+const STATS = [
+  {
+    value: "5-7%+",
+    label: "Stabilized Cash Yield",
+    note: "Durable cash yield with quarterly distribution potential from stabilized operations.",
+  },
+  {
+    value: "8-11%+",
+    label: "Base-Case Organic Return",
+    note: "Organic return profile from yield plus NAV growth without dependence on cap-rate compression.",
+  },
+  {
+    value: "13-20%",
+    label: "Target 5-7 Year Return / IRR",
+    note: "Target total return range from operational execution and structural upside as scale builds.",
+  },
+];
 
 export default function Home() {
   return (
-    <main className="bg-white text-neutral-900">
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/bldg-01.jpg"
-            alt="Small multifamily courtyard building"
-            fill
-            priority
-            className="object-cover"
-          />
-          {/* Institutional overlay for legibility */}
-          <div className="absolute inset-0 bg-white/70" />
-          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/55 to-white" />
-        </div>
-
-        <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-32">
-          <div className="max-w-3xl">
-            <div className="text-sm tracking-[0.18em] uppercase text-neutral-600">
-              Small multifamily (2–49 units)
+    <main>
+      <Section className="pb-10 pt-12 md:pt-16">
+        <Container>
+          <div className="grid items-center gap-8 md:grid-cols-[1.1fr_0.9fr]">
+            <div>
+              <p className="text-xs uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">
+                Small Multifamily (2-49 Units)
+              </p>
+              <h1 className="mt-4 font-serif text-4xl font-semibold tracking-tight md:text-6xl">
+                Durable, yield-forward, downside-protected investment grounded in critical U.S. housing.
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--mdh-muted)]">
+                Middle Door Homes is building a long-term institutional platform in the underinvested U.S.
+                small multifamily asset class through disciplined acquisitions, data-enabled portfolio
+                construction, and scattered-site operating rigor.
+              </p>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <Button href="/asset-class">The Asset Class</Button>
+                <Button href="/about" variant="secondary">
+                  About Middle Door
+                </Button>
+              </div>
             </div>
-
-            <h1 className="mt-4 text-4xl md:text-6xl font-semibold tracking-tight">
-              Middle Door Homes
-            </h1>
-
-            <p className="mt-6 text-lg md:text-xl text-neutral-700 leading-relaxed">
-              Durable, yield-forward, downside-protected investment grounded in
-              critical U.S. housing.
-            </p>
-
-            <div className="mt-10 flex flex-wrap gap-3">
-              <Link
-                href="/asset-class"
-                className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium bg-neutral-900 text-white hover:bg-neutral-800 transition"
-              >
-                The asset class
-              </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium bg-white text-neutral-900 border border-neutral-200 hover:bg-neutral-50 transition"
-              >
-                About us
-              </Link>
+            <div className="relative min-h-[320px] overflow-hidden rounded-2xl border border-[var(--mdh-line)] bg-white">
+              <Image
+                src="/images/bldg-08.jpg"
+                alt="Small multifamily building exterior"
+                fill
+                priority
+                className="object-cover"
+              />
             </div>
           </div>
-
-          {/* Stats */}
-          <div className="mt-14 grid md:grid-cols-3 gap-4">
-            {[
-              {
-                value: "5–7%+",
-                label: "Stabilized cash yield",
-                note: "Durable cash flow following operational stabilization.",
-              },
-              {
-                value: "8–11%+",
-                label: "Base-case return",
-                note: "Organic growth without reliance on exit timing.",
-              },
-              {
-                value: "13–20%",
-                label: "Target IRR (5–7 years)",
-                note: "Structural upside driven by operations and disciplined basis.",
-              },
-            ].map((s) => (
-              <div
-                key={s.label}
-                className="rounded-2xl border border-neutral-200/70 bg-white/80 backdrop-blur p-6 shadow-sm"
-              >
-                <div className="text-2xl md:text-3xl font-semibold tracking-tight">
-                  {s.value}
-                </div>
-                <div className="mt-2 text-xs uppercase tracking-[0.16em] text-neutral-600">
-                  {s.label}
-                </div>
-                <div className="mt-3 text-neutral-700">{s.note}</div>
-              </div>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {STATS.map((stat) => (
+              <Stat key={stat.label} value={stat.value} label={stat.label} note={stat.note} />
             ))}
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
-      {/* Supporting image strip */}
-      <section className="border-t border-neutral-200/70">
-        <div className="max-w-6xl mx-auto px-6 py-10">
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="rounded-2xl overflow-hidden border border-neutral-200/70 shadow-sm">
-              <Image
-                src="/images/bldg-02.jpg"
-                alt="Small multifamily building"
-                width={1200}
-                height={800}
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-neutral-200/70 shadow-sm">
-              <Image
-                src="/images/bldg-01.jpg"
-                alt="Courtyard building detail"
-                width={1200}
-                height={800}
-                className="w-full h-auto object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden border border-neutral-200/70 shadow-sm">
-              <Image
-                src="/images/bldg-02.jpg"
-                alt="Building streetscape"
-                width={1200}
-                height={800}
-                className="w-full h-auto object-cover"
-              />
-            </div>
+      <Divider />
+
+      <Section>
+        <Container>
+          <Heading>Middle Door&apos;s edge</Heading>
+          <Subheading>
+            Three linked capabilities support scale and long-term portfolio quality.
+          </Subheading>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            <Card>
+              <h3 className="text-lg font-semibold">Acquisition scale</h3>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--mdh-muted)]">
+                Sourcing through MLS channels, broker relationships, institutional partners, and 721
+                exchange partnerships.
+              </p>
+            </Card>
+            <Card>
+              <h3 className="text-lg font-semibold">Portfolio discipline</h3>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--mdh-muted)]">
+                Data and AI-enabled market/submarket selection with institutional, asset-level
+                underwriting and investment committee standards.
+              </p>
+            </Card>
+            <Card>
+              <h3 className="text-lg font-semibold">Scattered-site operations</h3>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--mdh-muted)]">
+                Operating playbook inspired by single family rental, including standardized turns,
+                pricing systems, and phased property management.
+              </p>
+            </Card>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
     </main>
   );
 }
