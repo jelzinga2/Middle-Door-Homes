@@ -16,7 +16,7 @@ export default function InvestorLoginPage() {
           <div className="grid gap-8 lg:grid-cols-[minmax(0,460px)_1fr]">
             <div>
               <Eyebrow>Investor Access</Eyebrow>
-              <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--mdh-title)] md:text-5xl">
+              <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--mdh-title)] md:text-[3.1rem]">
                 Investor Login
               </h1>
               <Card className="mt-6">

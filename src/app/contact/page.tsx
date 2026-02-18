@@ -15,7 +15,7 @@ export default function ContactPage() {
           <div className="grid gap-8 lg:grid-cols-[1fr_340px]">
             <div>
               <Eyebrow>Contact</Eyebrow>
-              <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--mdh-title)] md:text-5xl">
+              <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--mdh-title)] md:text-[3.1rem]">
                 Contact Us
               </h1>
               <Card className="mt-6">

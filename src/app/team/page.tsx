@@ -64,7 +64,7 @@ export default function TeamPage() {
           <div className="grid gap-8 lg:grid-cols-[1fr_340px]">
             <div>
               <Eyebrow>Leadership</Eyebrow>
-              <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--mdh-title)] md:text-5xl">
+              <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--mdh-title)] md:text-[3.1rem]">
                 Team
               </h1>
               <p className="mt-4 max-w-3xl text-lg leading-relaxed text-[var(--mdh-ink)]">
@@ -90,7 +90,7 @@ export default function TeamPage() {
                   </div>
                   <h2 className="text-xl font-semibold text-[var(--mdh-title)]">{member.name}</h2>
                 </div>
-                <ul className="mt-4 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-[var(--mdh-ink)]">
+                <ul className="mt-4 list-disc space-y-1.5 pl-5 text-[0.95rem] leading-relaxed text-[var(--mdh-ink)]">
                   {member.points.map((point) => (
                     <li key={point}>{point}</li>
                   ))}

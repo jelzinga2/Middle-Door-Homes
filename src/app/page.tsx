@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { Card, Container, Eyebrow, Heading, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -18,43 +17,29 @@ const STATS = [
 export default function Home() {
   return (
     <main>
-      <Section className="pb-10 pt-10">
+      <Section className="pb-12 pt-12">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
             <div>
               <Eyebrow>Middle Door Homes</Eyebrow>
-              <h1 className="mt-4 text-4xl font-semibold tracking-tight text-[var(--mdh-title)] md:text-6xl">
-                Institutional platform for the missing middle of US housing
+              <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-[var(--mdh-title)] md:text-6xl">
+                Institutional platform in the missing middle of US housing
               </h1>
-              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[var(--mdh-ink)] md:text-xl">
+              <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[var(--mdh-ink)] md:text-[1.15rem]">
                 Durable, yield-forward, downside-protected investment grounded in critical US housing.
                 Middle Door Homes is building a long-term institutional portfolio in small multifamily
                 through disciplined acquisitions, portfolio construction, and operating execution.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/about"
-                  className="rounded-full bg-[var(--mdh-title)] px-5 py-2.5 text-sm font-medium text-white hover:bg-[var(--mdh-ink-soft)]"
-                >
-                  Strategy Overview
-                </Link>
-                <Link
-                  href="/team"
-                  className="rounded-full border border-[var(--mdh-line)] bg-white px-5 py-2.5 text-sm font-medium text-[var(--mdh-ink)] hover:bg-[var(--mdh-bg)]"
-                >
-                  Leadership Team
-                </Link>
-              </div>
             </div>
 
             <div className="grid gap-3 sm:grid-cols-2">
-              <div className="relative h-52 overflow-hidden rounded-2xl border border-[var(--mdh-line)] sm:col-span-2 md:h-64">
+              <div className="relative h-56 overflow-hidden rounded-xl border border-[var(--mdh-line)] sm:col-span-2 md:h-72">
                 <Image src="/images/bldg-01.jpg" alt="Streetscape multifamily asset" fill priority className="object-cover" />
               </div>
-              <div className="relative h-36 overflow-hidden rounded-2xl border border-[var(--mdh-line)] md:h-40">
+              <div className="relative h-36 overflow-hidden rounded-xl border border-[var(--mdh-line)] md:h-40">
                 <Image src="/images/bldg-02.jpg" alt="Courtyard multifamily property" fill className="object-cover" />
               </div>
-              <div className="relative h-36 overflow-hidden rounded-2xl border border-[var(--mdh-line)] md:h-40">
+              <div className="relative h-36 overflow-hidden rounded-xl border border-[var(--mdh-line)] md:h-40">
                 <Image src="/images/bldg-03.jpg" alt="Urban multifamily building" fill className="object-cover" />
               </div>
             </div>
@@ -66,7 +51,7 @@ export default function Home() {
         <Container>
           <div className="grid gap-4 md:grid-cols-3">
             {STATS.map((item) => (
-              <Card key={item.label}>
+              <Card key={item.label} className="bg-white">
                 <p className="text-3xl font-semibold tracking-tight text-[var(--mdh-title)]">{item.value}</p>
                 <p className="mt-2 text-sm text-[var(--mdh-subtle)]">{item.label}</p>
               </Card>
@@ -75,7 +60,7 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section>
+      <Section className="pb-16">
         <Container>
           <Heading>Middle Door&apos;s edge</Heading>
           <div className="mt-7 grid gap-4 md:grid-cols-3">

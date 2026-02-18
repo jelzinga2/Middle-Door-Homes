@@ -19,23 +19,23 @@ export function Nav() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--mdh-line)] bg-white/95 backdrop-blur">
-      <Container className="py-3">
+      <Container className="py-4">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3" aria-label="Middle Door Homes home">
             <Image src="/images/Logo.png" alt="Middle Door Homes" width={30} height={30} priority />
-            <span className="text-sm font-semibold tracking-tight text-[var(--mdh-title)] md:text-base">
+            <span className="text-sm font-semibold tracking-tight text-[var(--mdh-title)] md:text-[1rem]">
               Middle Door Homes
             </span>
           </Link>
 
-          <nav aria-label="Primary" className="hidden items-center gap-7 text-sm md:flex">
+          <nav aria-label="Primary" className="hidden items-center gap-8 text-sm md:flex">
             {LINKS.map((link) => {
               const active = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`transition hover:text-[var(--mdh-title)] ${active ? "font-medium text-[var(--mdh-title)]" : "text-[var(--mdh-subtle)]"}`}
+                  className={`transition hover:text-[var(--mdh-title)] ${active ? "font-semibold text-[var(--mdh-title)]" : "text-[var(--mdh-subtle)]"}`}
                 >
                   {link.label}
                 </Link>

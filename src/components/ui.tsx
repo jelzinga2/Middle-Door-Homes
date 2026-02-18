@@ -8,7 +8,7 @@ type ClassName = {
 
 export function Container({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <div className={`mx-auto w-full max-w-[1180px] px-5 md:px-8 ${className ?? ""}`.trim()}>
+    <div className={`mx-auto w-full max-w-[1220px] px-6 md:px-10 ${className ?? ""}`.trim()}>
       {children}
     </div>
   );
@@ -20,7 +20,7 @@ export function Section({
   id,
 }: ClassName & { children: ReactNode; id?: string }) {
   return (
-    <section id={id} className={`py-12 md:py-14 ${className ?? ""}`.trim()}>
+    <section id={id} className={`py-14 md:py-16 ${className ?? ""}`.trim()}>
       {children}
     </section>
   );
@@ -28,7 +28,7 @@ export function Section({
 
 export function Heading({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <h2 className={`text-3xl font-semibold leading-tight tracking-[-0.01em] text-[var(--mdh-title)] md:text-4xl ${className ?? ""}`.trim()}>
+    <h2 className={`text-[1.8rem] font-semibold leading-tight tracking-[-0.01em] text-[var(--mdh-title)] md:text-[2.2rem] ${className ?? ""}`.trim()}>
       {children}
     </h2>
   );
@@ -52,7 +52,7 @@ export function Subheading({ className, children }: ClassName & { children: Reac
 
 export function Card({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <div className={`rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-surface)] p-5 shadow-[0_10px_30px_rgba(31,49,66,0.05)] md:p-6 ${className ?? ""}`.trim()}>
+    <div className={`rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-surface)] p-5 shadow-[0_4px_16px_rgba(23,33,43,0.04)] md:p-6 ${className ?? ""}`.trim()}>
       {children}
     </div>
   );
