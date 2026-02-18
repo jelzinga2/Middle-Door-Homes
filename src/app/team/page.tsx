@@ -39,9 +39,9 @@ const TEAM = [
 export default function TeamPage() {
   return (
     <main>
-      <Section className="pb-10 pt-12 md:pt-16">
+      <Section className="pb-8 pt-10 md:pt-12">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[1fr_420px] lg:items-end">
+          <div className="grid gap-7 lg:grid-cols-[1fr_420px] lg:items-end">
             <div>
               <Eyebrow>Leadership</Eyebrow>
               <Heading className="mt-3">Team</Heading>
@@ -64,20 +64,22 @@ export default function TeamPage() {
         </Container>
       </Section>
 
-      <Section className="pt-0">
+      <Section className="pt-1">
         <Container>
-          <div className="grid gap-8 md:grid-cols-2">
-            {TEAM.map((member) => (
-              <article key={member.name} className="grid gap-4 border-t border-[var(--mdh-line)] pt-6 md:grid-cols-[128px_1fr]">
-                <div className="relative h-32 w-32 overflow-hidden rounded-xl border border-[var(--mdh-line)]">
-                  <Image src={member.image} alt={member.name} fill sizes="128px" className="object-cover" />
-                </div>
-                <div>
-                  <h2 className="text-2xl font-medium tracking-tight text-[var(--mdh-title)]">{member.name}</h2>
-                  <p className="mt-3 max-w-[55ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">{member.bio}</p>
-                </div>
-              </article>
-            ))}
+          <div className="rounded-2xl border border-[var(--mdh-line)] bg-white/45 p-6 md:p-8">
+            <div className="grid gap-6 md:grid-cols-2">
+              {TEAM.map((member) => (
+                <article key={member.name} className="grid gap-4 border-t border-[var(--mdh-line)] pt-5 md:grid-cols-[128px_1fr]">
+                  <div className="relative h-32 w-32 overflow-hidden rounded-xl border border-[var(--mdh-line)]">
+                    <Image src={member.image} alt={member.name} fill sizes="128px" className="object-cover" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-medium tracking-tight text-[var(--mdh-title)]">{member.name}</h2>
+                    <p className="mt-3 max-w-[55ch] text-[0.97rem] leading-relaxed text-[var(--mdh-ink)]">{member.bio}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </Container>
       </Section>

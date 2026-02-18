@@ -26,7 +26,7 @@ body {
 }
 
 body {
-  background: linear-gradient(180deg, #ffffff 0%, var(--mdh-bg) 35%, var(--mdh-bg) 100%);
+  background: linear-gradient(180deg, #f9fbfc 0%, var(--mdh-bg) 100%);
   color: var(--mdh-ink);
   font-family: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
     Arial, sans-serif;

@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main>
-      <Section className="pb-10 pt-12 md:pt-16">
+      <Section className="pb-8 pt-10 md:pt-12">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[1fr_380px] lg:items-end">
+          <div className="grid gap-7 lg:grid-cols-[1fr_380px] lg:items-end">
             <div>
               <Eyebrow>Contact</Eyebrow>
               <Heading className="mt-3">Contact Us</Heading>

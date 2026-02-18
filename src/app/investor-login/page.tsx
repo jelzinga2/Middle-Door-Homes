@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 export default function InvestorLoginPage() {
   return (
     <main>
-      <Section className="pb-10 pt-12 md:pt-16">
+      <Section className="pb-8 pt-10 md:pt-12">
         <Container>
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,480px)_1fr] lg:items-start">
+          <div className="grid gap-7 lg:grid-cols-[minmax(0,480px)_1fr] lg:items-start">
             <div>
               <Eyebrow>Investor Access</Eyebrow>
               <Heading className="mt-3">Investor Login</Heading>

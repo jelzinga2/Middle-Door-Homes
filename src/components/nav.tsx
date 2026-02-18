@@ -19,7 +19,7 @@ export function Nav() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--mdh-line)] bg-white/95 backdrop-blur">
-      <Container className="py-4">
+      <Container className="py-3.5">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3.5" aria-label="Middle Door Homes home">
             <Image src="/images/Logo.png" alt="Middle Door Homes" width={38} height={38} priority />

@@ -8,7 +8,7 @@ type ClassName = {
 
 export function Container({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <div className={`mx-auto w-full max-w-7xl px-6 md:px-10 ${className ?? ""}`.trim()}>
+    <div className={`mx-auto w-full max-w-7xl px-5 md:px-8 ${className ?? ""}`.trim()}>
       {children}
     </div>
   );
@@ -20,7 +20,7 @@ export function Section({
   id,
 }: ClassName & { children: ReactNode; id?: string }) {
   return (
-    <section id={id} className={`py-14 md:py-20 ${className ?? ""}`.trim()}>
+    <section id={id} className={`py-10 md:py-14 ${className ?? ""}`.trim()}>
       {children}
     </section>
   );
