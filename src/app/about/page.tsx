@@ -1,108 +1,113 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Card, Container, Divider, Heading, Section, WideHero } from "@/components/ui";
+import { Card, Container, Eyebrow, Heading, Section } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Asset class opportunity, Middle Door's edge, and investor benefits for the small multifamily strategy.",
+    "Asset class opportunity, Middle Door's edge, and investor benefits for a long-term small multifamily strategy.",
 };
 
 export default function AboutPage() {
   return (
     <main>
-      <WideHero imageSrc="/images/bldg-06.jpg" imageAlt="Small multifamily neighborhood" />
-
       <Section className="pb-8 pt-10">
         <Container>
-          <div className="grid gap-6 md:grid-cols-[240px_1fr] md:gap-8">
-            <Heading className="text-3xl leading-tight md:text-4xl">Asset Class Opportunity</Heading>
-            <div className="space-y-4 text-lg leading-relaxed italic text-[var(--mdh-ink)] md:text-2xl">
-              <p>
-                Small multifamily (2-49 unit buildings) is the last significant underinvested US housing
-                category, with <strong className="text-[var(--mdh-title)] not-italic">$5 Trillion of asset value</strong>{" "}
-                and <strong className="text-[var(--mdh-title)] not-italic">&lt;3% institutional ownership</strong>
-              </p>
-              <p>
-                Valuation gap + turnover create a{" "}
-                <strong className="text-[var(--mdh-title)] not-italic">window for a scaled operator</strong>
-              </p>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
-      <Divider />
-
-      <Section className="py-8">
-        <Container>
-          <div className="grid gap-6 md:grid-cols-[240px_1fr] md:gap-8">
-            <Heading className="text-3xl leading-tight md:text-4xl">Middle Door&apos;s Edge</Heading>
+          <div className="grid gap-8 lg:grid-cols-[1fr_340px]">
             <div>
-              <p className="text-lg leading-relaxed italic text-[var(--mdh-ink)] md:text-2xl">
-                Our team brings <strong className="text-[var(--mdh-title)] not-italic">billions of dollars of collective experience</strong>, with a proven playbook to acquire and manage at scale:
+              <Eyebrow>Strategy</Eyebrow>
+              <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[var(--mdh-title)] md:text-5xl">
+                About Middle Door Homes
+              </h1>
+              <p className="mt-5 max-w-3xl text-lg leading-relaxed text-[var(--mdh-ink)]">
+                We are building an institutional small multifamily platform focused on durable income,
+                disciplined basis, and long-term compounding through operating execution.
               </p>
-              <div className="mt-7 grid gap-4 md:grid-cols-3">
-                <Card>
-                  <p className="text-lg leading-relaxed text-[var(--mdh-ink)]">
-                    <strong className="text-[var(--mdh-title)]">Acquisitions at scale</strong> through MLS data,
-                    brokers, partners, and 721 exchange partnerships
-                  </p>
-                </Card>
-                <Card>
-                  <p className="text-lg leading-relaxed text-[var(--mdh-ink)]">
-                    <strong className="text-[var(--mdh-title)]">Portfolio discipline</strong> using data /
-                    AI-enabled submarket selection plus institutional asset-level assessments
-                  </p>
-                </Card>
-                <Card>
-                  <p className="text-lg leading-relaxed text-[var(--mdh-ink)]">
-                    <strong className="text-[var(--mdh-title)]">Scattered site operational playbook</strong>{" "}
-                    developed in analog single family rental model
-                  </p>
-                </Card>
-              </div>
+            </div>
+            <div className="relative h-44 overflow-hidden rounded-2xl border border-[var(--mdh-line)] md:h-52">
+              <Image src="/images/bldg-06.jpg" alt="Small multifamily neighborhood" fill className="object-cover" />
             </div>
           </div>
         </Container>
       </Section>
 
-      <Divider />
-
-      <Section className="py-8">
+      <Section className="pt-4">
         <Container>
-          <Heading className="text-3xl md:text-4xl">Investor benefits</Heading>
-          <Card className="mt-6 border-dashed">
-            <ul className="list-disc space-y-3 pl-5 text-lg leading-relaxed text-[var(--mdh-ink)]">
+          <Heading>Asset class opportunity</Heading>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <Card>
+              <p className="text-3xl font-semibold text-[var(--mdh-title)]">$5T+</p>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--mdh-ink)]">
+                Small multifamily (2-49 units) represents one of the largest underinstitutionalized
+                categories in US housing.
+              </p>
+            </Card>
+            <Card>
+              <p className="text-3xl font-semibold text-[var(--mdh-title)]">&lt;3%</p>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--mdh-ink)]">
+                Institutional ownership remains limited, creating space for a scaled, disciplined
+                operator.
+              </p>
+            </Card>
+            <Card>
+              <p className="text-3xl font-semibold text-[var(--mdh-title)]">15-30%+</p>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--mdh-ink)]">
+                Assets often trade below replacement cost, supporting downside protection at entry.
+              </p>
+            </Card>
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="pt-4">
+        <Container>
+          <Heading>Middle Door&apos;s edge</Heading>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            <Card>
+              <p className="text-lg font-semibold text-[var(--mdh-title)]">Acquisitions at scale</p>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--mdh-ink)]">
+                MLS channels, broker networks, partner pathways, and 721 relationships widen sourcing
+                and increase selectivity.
+              </p>
+            </Card>
+            <Card>
+              <p className="text-lg font-semibold text-[var(--mdh-title)]">Portfolio discipline</p>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--mdh-ink)]">
+                Data and AI support market selection and underwriting, while institutional standards
+                govern risk and investment decisions.
+              </p>
+            </Card>
+            <Card>
+              <p className="text-lg font-semibold text-[var(--mdh-title)]">Scattered-site ops</p>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--mdh-ink)]">
+                Repeatable operations inspired by SFR playbooks drive consistency in turns, rent
+                execution, and cost efficiency.
+              </p>
+            </Card>
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="pt-4">
+        <Container>
+          <Heading>Investor benefits</Heading>
+          <Card className="mt-6">
+            <ul className="list-disc space-y-3 pl-5 text-sm leading-relaxed text-[var(--mdh-ink)] md:text-base">
               <li>
-                <strong className="text-[var(--mdh-title)]">Cash yield plus upside.</strong> 5-7%+ durable cash
-                yield building to 8-11%+ base case return; structural upside with appreciation &amp; scale
-                (13-20% target 5-7 year return)
+                5-7%+ stabilized cash yield, building toward 8-11%+ base-case organic return.
               </li>
               <li>
-                <strong className="text-[var(--mdh-title)]">Downside protection and low volatility investment</strong>{" "}
-                backed by critical, long-term housing, acquired below replacement cost in
-                supply-constrained areas
+                13-20% target total 5-7 year return / IRR through operational execution and structural
+                upside.
               </li>
-              <li className="italic">
-                Return drivers primarily operational vs. exit timing or cap-rate compression
+              <li>
+                Downside framing anchored in below-replacement-cost basis and return drivers that are
+                primarily operational, not cap-rate compression timing.
               </li>
             </ul>
           </Card>
         </Container>
       </Section>
-
-      <section className="border-y border-[var(--mdh-line)]">
-        <div className="grid grid-cols-2 md:grid-cols-4">
-          {["/images/bldg-07.jpg", "/images/bldg-08.jpg", "/images/bldg-09.jpg", "/images/bldg-10.jpg"].map(
-            (src) => (
-              <div key={src} className="relative h-28 md:h-36">
-                <Image src={src} alt="Small multifamily asset" fill className="object-cover" />
-              </div>
-            ),
-          )}
-        </div>
-      </section>
     </main>
   );
 }

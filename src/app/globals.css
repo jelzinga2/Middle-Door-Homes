@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --mdh-bg: #f2f5f7;
+  --mdh-bg: #f8fafb;
   --mdh-surface: #ffffff;
-  --mdh-ink: #46505a;
-  --mdh-ink-soft: #3f4851;
-  --mdh-title: #2f5c7d;
-  --mdh-subtle: #4f5a64;
-  --mdh-muted: #67727d;
-  --mdh-line: #ccd7e0;
+  --mdh-ink: #24313c;
+  --mdh-ink-soft: #1d2833;
+  --mdh-title: #2c5878;
+  --mdh-subtle: #4c5a67;
+  --mdh-muted: #667785;
+  --mdh-line: #d7e1e9;
   --mdh-accent: #2f5c7d;
   --background: var(--mdh-bg);
   --foreground: var(--mdh-ink);
@@ -26,7 +26,7 @@ body {
 }
 
 body {
-  background: var(--mdh-bg);
+  background: linear-gradient(180deg, #ffffff 0%, var(--mdh-bg) 42%, var(--mdh-bg) 100%);
   color: var(--mdh-ink);
   font-family: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
     Arial, sans-serif;

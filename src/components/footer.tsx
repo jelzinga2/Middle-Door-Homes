@@ -4,7 +4,7 @@ import { Container } from "./ui";
 export function Footer() {
   return (
     <footer className="mt-20 border-t border-[var(--mdh-line)] bg-white/95">
-      <Container className="py-10 md:py-12">
+      <Container className="py-10">
         <div className="flex flex-col gap-3 text-sm text-[var(--mdh-subtle)] md:flex-row md:items-center md:justify-between">
           <div>&copy; {new Date().getFullYear()} Middle Door Homes</div>
           <div className="flex items-center gap-4">
@@ -17,7 +17,7 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="mt-6 max-w-5xl text-xs leading-relaxed text-[var(--mdh-muted)] md:text-sm">
+        <p className="mt-5 max-w-4xl text-xs leading-relaxed text-[var(--mdh-muted)] md:text-sm">
           For informational purposes only; not an offer to sell or solicitation to buy securities.
           Forward-looking statements involve risks and uncertainties, and past performance does not
           guarantee future results. Please consult your legal, tax, and financial advisors.

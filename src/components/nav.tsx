@@ -18,17 +18,17 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--mdh-line)] bg-[rgba(246,248,250,0.94)] backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-[var(--mdh-line)] bg-white/95 backdrop-blur">
       <Container className="py-3">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3" aria-label="Middle Door Homes home">
             <Image src="/images/Logo.png" alt="Middle Door Homes" width={30} height={30} priority />
-            <span className="text-sm font-medium tracking-tight text-[var(--mdh-title)] md:text-[0.95rem]">
+            <span className="text-sm font-semibold tracking-tight text-[var(--mdh-title)] md:text-base">
               Middle Door Homes
             </span>
           </Link>
 
-          <nav aria-label="Primary" className="hidden items-center gap-7 text-[0.92rem] md:flex">
+          <nav aria-label="Primary" className="hidden items-center gap-7 text-sm md:flex">
             {LINKS.map((link) => {
               const active = pathname === link.href;
               return (
@@ -46,7 +46,7 @@ export function Nav() {
           <div className="hidden md:block">
             <a
               href="mailto:info@middledoorhomes.com"
-              className="text-xs font-medium text-[var(--mdh-ink)] transition hover:text-[var(--mdh-title)] md:text-sm"
+              className="text-xs font-medium text-[var(--mdh-subtle)] transition hover:text-[var(--mdh-title)] md:text-sm"
             >
               info@middledoorhomes.com
             </a>

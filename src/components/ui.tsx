@@ -8,7 +8,7 @@ type ClassName = {
 
 export function Container({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <div className={`mx-auto w-full max-w-[1200px] px-5 md:px-8 ${className ?? ""}`.trim()}>
+    <div className={`mx-auto w-full max-w-[1180px] px-5 md:px-8 ${className ?? ""}`.trim()}>
       {children}
     </div>
   );
@@ -34,6 +34,14 @@ export function Heading({ className, children }: ClassName & { children: ReactNo
   );
 }
 
+export function Eyebrow({ className, children }: ClassName & { children: ReactNode }) {
+  return (
+    <p className={`text-xs font-medium uppercase tracking-[0.16em] text-[var(--mdh-subtle)] ${className ?? ""}`.trim()}>
+      {children}
+    </p>
+  );
+}
+
 export function Subheading({ className, children }: ClassName & { children: ReactNode }) {
   return (
     <p className={`mt-4 max-w-3xl text-base leading-relaxed text-[var(--mdh-muted)] md:text-lg ${className ?? ""}`.trim()}>
@@ -44,7 +52,7 @@ export function Subheading({ className, children }: ClassName & { children: Reac
 
 export function Card({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <div className={`rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-surface)] p-5 shadow-[0_1px_2px_rgba(15,23,32,0.03)] md:p-6 ${className ?? ""}`.trim()}>
+    <div className={`rounded-2xl border border-[var(--mdh-line)] bg-[var(--mdh-surface)] p-5 shadow-[0_10px_30px_rgba(31,49,66,0.05)] md:p-6 ${className ?? ""}`.trim()}>
       {children}
     </div>
   );

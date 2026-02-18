@@ -42,7 +42,7 @@ export function InvestorLoginForm() {
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           placeholder="investor@firm.com"
-          className="w-full rounded-xl border border-[var(--mdh-line)] bg-white px-4 py-3 text-sm"
+          className="w-full rounded-xl border border-[var(--mdh-line)] bg-white px-4 py-3 text-sm outline-none focus:border-[var(--mdh-title)]"
         />
       </div>
       <div>
@@ -60,13 +60,13 @@ export function InvestorLoginForm() {
           value={password}
           onChange={(event) => setPassword(event.target.value)}
           placeholder="Enter password"
-          className="w-full rounded-xl border border-[var(--mdh-line)] bg-white px-4 py-3 text-sm"
+          className="w-full rounded-xl border border-[var(--mdh-line)] bg-white px-4 py-3 text-sm outline-none focus:border-[var(--mdh-title)]"
         />
       </div>
       <button
         type="submit"
         disabled={loading}
-        className="inline-flex rounded-full bg-[var(--mdh-ink)] px-5 py-2.5 text-sm font-medium text-white hover:bg-[var(--mdh-ink-soft)] disabled:cursor-not-allowed disabled:opacity-70"
+        className="inline-flex rounded-full bg-[var(--mdh-title)] px-5 py-2.5 text-sm font-medium text-white hover:bg-[var(--mdh-ink-soft)] disabled:cursor-not-allowed disabled:opacity-70"
       >
         {loading ? "Signing In..." : "Sign In"}
       </button>
