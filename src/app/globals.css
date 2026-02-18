@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --mdh-bg: #d5dbe0;
+  --mdh-bg: #f2f5f7;
   --mdh-surface: #ffffff;
-  --mdh-ink: #4f5459;
-  --mdh-ink-soft: #464b50;
+  --mdh-ink: #46505a;
+  --mdh-ink-soft: #3f4851;
   --mdh-title: #2f5c7d;
-  --mdh-subtle: #4f5459;
-  --mdh-muted: #5f6469;
-  --mdh-line: #8da2b3;
+  --mdh-subtle: #4f5a64;
+  --mdh-muted: #67727d;
+  --mdh-line: #ccd7e0;
   --mdh-accent: #2f5c7d;
   --background: var(--mdh-bg);
   --foreground: var(--mdh-ink);

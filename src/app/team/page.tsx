@@ -63,19 +63,19 @@ export default function TeamPage() {
 
       <Section className="pt-10">
         <Container>
-          <h1 className="text-2xl leading-tight md:text-[3.1rem]">
+          <h1 className="text-2xl leading-tight md:text-5xl">
             <span className="font-semibold text-[var(--mdh-title)]">Team | </span>
             <span className="text-[var(--mdh-ink)]">
               Deep experience in institutional scattered site housing, scaling early-stage platforms,
               and AI &amp; data science
             </span>
           </h1>
-          <p className="mt-4 text-lg italic leading-snug text-[var(--mdh-title)] md:text-[2rem]">
+          <p className="mt-4 text-lg italic leading-relaxed text-[var(--mdh-title)] md:text-2xl">
             Scattered site execution is the core challenge of this asset class; team is deeply
             experienced in scattered site housing at scale
           </p>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
             {TEAM.map((member) => (
               <Card key={member.name}>
                 <div className="flex items-center gap-4">
@@ -84,7 +84,7 @@ export default function TeamPage() {
                   </div>
                   <h2 className="text-2xl font-semibold text-[var(--mdh-title)]">{member.name}</h2>
                 </div>
-                <ul className="mt-5 list-disc space-y-2 pl-5 text-base leading-relaxed text-[var(--mdh-ink)] md:text-lg">
+                <ul className="mt-4 list-disc space-y-1.5 pl-5 text-base leading-relaxed text-[var(--mdh-ink)]">
                   {member.points.map((point) => (
                     <li key={point}>{point}</li>
                   ))}

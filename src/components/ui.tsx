@@ -20,7 +20,7 @@ export function Section({
   id,
 }: ClassName & { children: ReactNode; id?: string }) {
   return (
-    <section id={id} className={`py-14 md:py-16 ${className ?? ""}`.trim()}>
+    <section id={id} className={`py-12 md:py-14 ${className ?? ""}`.trim()}>
       {children}
     </section>
   );
@@ -80,7 +80,7 @@ export function WideHero({
   imageAlt: string;
 }) {
   return (
-    <div className="relative h-56 w-full overflow-hidden border-b border-[var(--mdh-line)] md:h-80">
+    <div className="relative h-44 w-full overflow-hidden border-b border-[var(--mdh-line)] md:h-56">
       <Image src={imageSrc} alt={imageAlt} fill priority className="object-cover" />
       <div className="absolute inset-0 bg-gradient-to-b from-[rgba(12,22,31,0.08)] to-transparent" />
     </div>
