@@ -8,10 +8,9 @@ import { Container } from "./ui";
 
 const LINKS = [
   { href: "/about", label: "About" },
-  { href: "/asset-class", label: "Asset Class" },
   { href: "/team", label: "Team" },
   { href: "/investor-login", label: "Investor Login" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
 export function Nav() {
@@ -19,24 +18,24 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--mdh-line)] bg-white/95 backdrop-blur">
-      <Container className="py-4">
+    <header className="sticky top-0 z-50 border-b border-[var(--mdh-line)] bg-[rgba(246,248,250,0.94)] backdrop-blur">
+      <Container className="py-3">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3" aria-label="Middle Door Homes home">
             <Image src="/images/Logo.png" alt="Middle Door Homes" width={30} height={30} priority />
-            <span className="text-sm font-semibold tracking-tight text-[var(--mdh-ink)] md:text-base">
+            <span className="text-sm font-medium tracking-tight text-[var(--mdh-title)] md:text-[0.95rem]">
               Middle Door Homes
             </span>
           </Link>
 
-          <nav aria-label="Primary" className="hidden items-center gap-6 text-sm md:flex">
+          <nav aria-label="Primary" className="hidden items-center gap-7 text-[0.92rem] md:flex">
             {LINKS.map((link) => {
               const active = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`transition hover:text-[var(--mdh-ink)] ${active ? "text-[var(--mdh-ink)]" : "text-[var(--mdh-subtle)]"}`}
+                  className={`transition hover:text-[var(--mdh-title)] ${active ? "font-medium text-[var(--mdh-title)]" : "text-[var(--mdh-subtle)]"}`}
                 >
                   {link.label}
                 </Link>
@@ -47,7 +46,7 @@ export function Nav() {
           <div className="hidden md:block">
             <a
               href="mailto:info@middledoorhomes.com"
-              className="text-xs font-medium text-[var(--mdh-ink)] transition hover:opacity-70 md:text-sm"
+              className="text-xs font-medium text-[var(--mdh-ink)] transition hover:text-[var(--mdh-title)] md:text-sm"
             >
               info@middledoorhomes.com
             </a>

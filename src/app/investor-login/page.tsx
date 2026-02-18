@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Card, Container, Section } from "@/components/ui";
+import { Card, Container, Section, WideHero } from "@/components/ui";
 import { InvestorLoginForm } from "@/components/investor-login-form";
 
 export const metadata: Metadata = {
@@ -11,17 +11,16 @@ export const metadata: Metadata = {
 export default function InvestorLoginPage() {
   return (
     <main>
+      <WideHero imageSrc="/images/bldg-04.jpg" imageAlt="Multifamily building" />
+
       <Section>
         <Container className="max-w-2xl">
           <p className="text-xs uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">Investor Login</p>
-          <h1 className="mt-4 font-serif text-4xl font-semibold tracking-tight md:text-5xl">
+          <h1 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--mdh-title)] md:text-4xl">
             Investor portal access
           </h1>
-          <p className="mt-5 text-base leading-relaxed text-[var(--mdh-muted)]">
-            Placeholder login interface. No investor-facing gated content is connected yet.
-          </p>
 
-          <Card className="mt-10">
+          <Card className="mt-8">
             <InvestorLoginForm />
           </Card>
         </Container>

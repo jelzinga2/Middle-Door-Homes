@@ -1,78 +1,108 @@
 import type { Metadata } from "next";
-import { Card, Container, Heading, Section, Subheading } from "@/components/ui";
+import Image from "next/image";
+import { Card, Container, Divider, Heading, Section, WideHero } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About",
   description:
-    "Middle Door Homes builds a long-term institutional platform in small multifamily with disciplined underwriting, data-enabled portfolio construction, and scattered-site operating expertise.",
+    "Asset class opportunity, Middle Door's edge, and investor benefits for the small multifamily strategy.",
 };
 
 export default function AboutPage() {
   return (
     <main>
-      <Section>
-        <Container>
-          <p className="text-xs uppercase tracking-[0.18em] text-[var(--mdh-subtle)]">About Us</p>
-          <h1 className="mt-4 font-serif text-4xl font-semibold tracking-tight md:text-5xl">
-            Building an institutional platform in the missing middle of U.S. housing.
-          </h1>
-          <Subheading>
-            Middle Door Homes is focused on assembling and operating a diversified, multi-market
-            portfolio of small multifamily buildings with a long-term orientation toward cash yield,
-            operational durability, and compounding value.
-          </Subheading>
-        </Container>
-      </Section>
+      <WideHero imageSrc="/images/bldg-06.jpg" imageAlt="Small multifamily neighborhood" />
 
-      <Section className="pt-0">
+      <Section className="pb-8 pt-10">
         <Container>
-          <div className="grid gap-4 md:grid-cols-3">
-            <Card>
-              <h2 className="text-lg font-semibold">Institutional rigor, local execution</h2>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--mdh-muted)]">
-                The platform combines institutional underwriting and investment governance with
-                neighborhood-level operating focus in each market.
+          <div className="grid gap-6 md:grid-cols-[240px_1fr] md:gap-8">
+            <Heading className="text-3xl leading-tight md:text-5xl">Asset Class Opportunity</Heading>
+            <div className="space-y-5 text-xl leading-snug italic text-[var(--mdh-ink)] md:text-[2.35rem]">
+              <p>
+                Small multifamily (2-49 unit buildings) is the last significant underinvested US housing
+                category, with <strong className="text-[var(--mdh-title)] not-italic">$5 Trillion of asset value</strong>{" "}
+                and <strong className="text-[var(--mdh-title)] not-italic">&lt;3% institutional ownership</strong>
               </p>
-            </Card>
-            <Card>
-              <h2 className="text-lg font-semibold">Long-term alignment</h2>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--mdh-muted)]">
-                Strategy is centered on stabilized cash flow and measured portfolio growth rather than
-                short-duration exits or macro timing calls.
+              <p>
+                Valuation gap + turnover create a{" "}
+                <strong className="text-[var(--mdh-title)] not-italic">window for a scaled operator</strong>
               </p>
-            </Card>
-            <Card>
-              <h2 className="text-lg font-semibold">Category creation mindset</h2>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--mdh-muted)]">
-                The objective is to help define a new institutional category in U.S. housing by
-                scaling quality operations in an underinstitutionalized asset class.
-              </p>
-            </Card>
+            </div>
           </div>
         </Container>
       </Section>
 
-      <Section className="pt-0">
+      <Divider />
+
+      <Section className="py-8">
         <Container>
-          <Heading>Approach</Heading>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            <Card>
-              <h3 className="text-base font-semibold">Portfolio build-out</h3>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--mdh-muted)]">
-                Acquire 2-49 unit buildings in high-conviction submarkets through multiple channels,
-                including broker networks, direct sourcing, and exchange-based partnerships.
+          <div className="grid gap-6 md:grid-cols-[240px_1fr] md:gap-8">
+            <Heading className="text-3xl leading-tight md:text-5xl">Middle Door&apos;s Edge</Heading>
+            <div>
+              <p className="text-xl leading-snug italic text-[var(--mdh-ink)] md:text-[2.2rem]">
+                Our team brings <strong className="text-[var(--mdh-title)] not-italic">billions of dollars of collective experience</strong>, with a proven playbook to acquire and manage at scale:
               </p>
-            </Card>
-            <Card>
-              <h3 className="text-base font-semibold">Operational value creation</h3>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--mdh-muted)]">
-                Improve asset performance through standardized turns, expense control, and tenant
-                retention supported by data-enabled operating systems.
-              </p>
-            </Card>
+              <div className="mt-7 grid gap-4 md:grid-cols-3">
+                <Card>
+                  <p className="text-lg leading-snug text-[var(--mdh-ink)] md:text-[1.85rem]">
+                    <strong className="text-[var(--mdh-title)]">Acquisitions at scale</strong> through MLS data,
+                    brokers, partners, and 721 exchange partnerships
+                  </p>
+                </Card>
+                <Card>
+                  <p className="text-lg leading-snug text-[var(--mdh-ink)] md:text-[1.85rem]">
+                    <strong className="text-[var(--mdh-title)]">Portfolio discipline</strong> using data /
+                    AI-enabled submarket selection plus institutional asset-level assessments
+                  </p>
+                </Card>
+                <Card>
+                  <p className="text-lg leading-snug text-[var(--mdh-ink)] md:text-[1.85rem]">
+                    <strong className="text-[var(--mdh-title)]">Scattered site operational playbook</strong>{" "}
+                    developed in analog single family rental model
+                  </p>
+                </Card>
+              </div>
+            </div>
           </div>
         </Container>
       </Section>
+
+      <Divider />
+
+      <Section className="py-8">
+        <Container>
+          <Heading className="text-3xl md:text-5xl">Investor benefits</Heading>
+          <Card className="mt-6 border-dashed">
+            <ul className="list-disc space-y-4 pl-5 text-lg leading-snug text-[var(--mdh-ink)] md:text-[1.9rem]">
+              <li>
+                <strong className="text-[var(--mdh-title)]">Cash yield plus upside.</strong> 5-7%+ durable cash
+                yield building to 8-11%+ base case return; structural upside with appreciation &amp; scale
+                (13-20% target 5-7 year return)
+              </li>
+              <li>
+                <strong className="text-[var(--mdh-title)]">Downside protection and low volatility investment</strong>{" "}
+                backed by critical, long-term housing, acquired below replacement cost in
+                supply-constrained areas
+              </li>
+              <li className="italic">
+                Return drivers primarily operational vs. exit timing or cap-rate compression
+              </li>
+            </ul>
+          </Card>
+        </Container>
+      </Section>
+
+      <section className="border-y border-[var(--mdh-line)]">
+        <div className="grid grid-cols-2 md:grid-cols-4">
+          {["/images/bldg-07.jpg", "/images/bldg-08.jpg", "/images/bldg-09.jpg", "/images/bldg-10.jpg"].map(
+            (src) => (
+              <div key={src} className="relative h-32 md:h-44">
+                <Image src={src} alt="Small multifamily asset" fill className="object-cover" />
+              </div>
+            ),
+          )}
+        </div>
+      </section>
     </main>
   );
 }

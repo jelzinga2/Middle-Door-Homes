@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ReactNode } from "react";
 
 type ClassName = {
@@ -6,7 +7,11 @@ type ClassName = {
 };
 
 export function Container({ className, children }: ClassName & { children: ReactNode }) {
-  return <div className={`mx-auto w-full max-w-6xl px-6 ${className ?? ""}`.trim()}>{children}</div>;
+  return (
+    <div className={`mx-auto w-full max-w-[1200px] px-5 md:px-8 ${className ?? ""}`.trim()}>
+      {children}
+    </div>
+  );
 }
 
 export function Section({
@@ -15,7 +20,7 @@ export function Section({
   id,
 }: ClassName & { children: ReactNode; id?: string }) {
   return (
-    <section id={id} className={`py-16 md:py-20 ${className ?? ""}`.trim()}>
+    <section id={id} className={`py-14 md:py-16 ${className ?? ""}`.trim()}>
       {children}
     </section>
   );
@@ -23,7 +28,7 @@ export function Section({
 
 export function Heading({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <h2 className={`font-serif text-3xl font-semibold tracking-tight text-[var(--mdh-ink)] md:text-4xl ${className ?? ""}`.trim()}>
+    <h2 className={`text-3xl font-semibold leading-tight tracking-[-0.01em] text-[var(--mdh-title)] md:text-4xl ${className ?? ""}`.trim()}>
       {children}
     </h2>
   );
@@ -39,7 +44,7 @@ export function Subheading({ className, children }: ClassName & { children: Reac
 
 export function Card({ className, children }: ClassName & { children: ReactNode }) {
   return (
-    <div className={`rounded-2xl border border-[var(--mdh-line)] bg-white p-6 shadow-[0_1px_2px_rgba(15,23,32,0.04)] ${className ?? ""}`.trim()}>
+    <div className={`rounded-xl border border-[var(--mdh-line)] bg-[var(--mdh-surface)] p-5 shadow-[0_1px_2px_rgba(15,23,32,0.03)] md:p-6 ${className ?? ""}`.trim()}>
       {children}
     </div>
   );
@@ -65,6 +70,21 @@ export function Stat({
 
 export function Divider() {
   return <div className="h-px w-full bg-[var(--mdh-line)]" aria-hidden />;
+}
+
+export function WideHero({
+  imageSrc,
+  imageAlt,
+}: {
+  imageSrc: string;
+  imageAlt: string;
+}) {
+  return (
+    <div className="relative h-56 w-full overflow-hidden border-b border-[var(--mdh-line)] md:h-80">
+      <Image src={imageSrc} alt={imageAlt} fill priority className="object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[rgba(12,22,31,0.08)] to-transparent" />
+    </div>
+  );
 }
 
 export function Button({
