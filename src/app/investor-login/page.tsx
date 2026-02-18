@@ -30,6 +30,7 @@ export default function InvestorLoginPage() {
                   alt="Multifamily property exterior"
                   fill
                   quality={90}
+                  sizes="100vw"
                   className="object-cover object-[center_44%]"
                 />
               </div>
@@ -39,6 +40,7 @@ export default function InvestorLoginPage() {
                   alt="Small multifamily asset"
                   fill
                   quality={90}
+                  sizes="50vw"
                   className="object-cover object-[center_50%]"
                 />
               </div>
@@ -48,6 +50,7 @@ export default function InvestorLoginPage() {
                   alt="Neighborhood building stock"
                   fill
                   quality={90}
+                  sizes="50vw"
                   className="object-cover object-[center_45%]"
                 />
               </div>

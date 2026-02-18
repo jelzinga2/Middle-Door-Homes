@@ -35,6 +35,7 @@ export default function AssetClassPage() {
                 alt="Portfolio-quality small multifamily asset"
                 fill
                 quality={90}
+                sizes="(min-width: 768px) calc(100vw - 360px), 100vw"
                 className="object-cover object-[center_54%]"
               />
             </div>
@@ -44,6 +45,7 @@ export default function AssetClassPage() {
                 alt="Urban infill multifamily stock"
                 fill
                 quality={90}
+                sizes="(min-width: 768px) 300px, 100vw"
                 className="object-cover object-[center_48%]"
               />
             </div>

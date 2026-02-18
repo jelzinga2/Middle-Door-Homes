@@ -31,6 +31,7 @@ export default function AboutPage() {
                 alt="Small multifamily streetscape"
                 fill
                 quality={90}
+                sizes="(min-width: 1024px) 390px, 100vw"
                 className="object-cover object-[center_62%]"
               />
             </div>
@@ -47,6 +48,7 @@ export default function AboutPage() {
                 alt="Small multifamily stock in mature neighborhood"
                 fill
                 quality={90}
+                sizes="(min-width: 640px) 66vw, 100vw"
                 className="object-cover object-[center_52%]"
               />
             </div>
@@ -56,6 +58,7 @@ export default function AboutPage() {
                 alt="Portfolio-quality multifamily exterior"
                 fill
                 quality={90}
+                sizes="(min-width: 640px) 34vw, 100vw"
                 className="object-cover object-[center_46%]"
               />
             </div>

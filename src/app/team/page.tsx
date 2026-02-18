@@ -47,6 +47,7 @@ export default function TeamPage() {
             fill
             priority
             quality={90}
+            sizes="100vw"
             className="object-cover object-[center_38%]"
           />
         </div>
@@ -71,7 +72,7 @@ export default function TeamPage() {
             {TEAM.map((member) => (
               <article key={member.name} className="grid gap-6 py-8 md:grid-cols-[180px_1fr] md:items-center">
                 <div className="relative h-44 w-44 overflow-hidden rounded-xl border border-[var(--mdh-line)]">
-                  <Image src={member.image} alt={member.name} fill className="object-cover" />
+                  <Image src={member.image} alt={member.name} fill sizes="176px" className="object-cover" />
                 </div>
                 <div>
                   <h2 className="text-2xl font-semibold text-[var(--mdh-title)]">{member.name}</h2>

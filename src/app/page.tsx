@@ -19,6 +19,7 @@ export default function Home() {
             fill
             priority
             quality={90}
+            sizes="100vw"
             className="object-cover object-[center_42%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[rgba(15,24,34,0.56)] via-[rgba(15,24,34,0.22)] to-transparent" />
@@ -94,6 +95,7 @@ export default function Home() {
                   alt="Mid-rise multifamily asset"
                   fill
                   quality={90}
+                  sizes="(min-width: 640px) 66vw, 100vw"
                   className="object-cover object-[center_46%]"
                 />
               </div>
@@ -103,6 +105,7 @@ export default function Home() {
                   alt="Neighborhood small multifamily"
                   fill
                   quality={90}
+                  sizes="(min-width: 640px) 34vw, 100vw"
                   className="object-cover object-[center_60%]"
                 />
               </div>
