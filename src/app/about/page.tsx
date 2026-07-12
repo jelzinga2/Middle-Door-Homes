@@ -21,7 +21,7 @@ const TEAM = [
     name: "Jose Torres",
     title: "Chief Executive Officer",
     photo: "/images/jose-torres.jpg",
-    bio: "Jose has operated inside two of the most significant scattered-site residential portfolios built in the last decade. He led portfolio management at Home Partners of America through the Blackstone acquisition and Tricon merger, overseeing 30,000+ homes, and ran asset management and capital markets at Invitation Homes through its IPO. He knows exactly what institutional-quality residential management looks like from the inside. Prior experience at CBRE and RealFoundations.",
+    bio: "Jose has operated inside two of the most significant scattered-site residential portfolios built in the last decade. He was head of asset management at Home Partners of America through the Blackstone acquisition and Tricon merger, overseeing 30,000+ homes, and served as chief of staff within Invitation Homes' finance organization through its IPO. He knows what institutional-quality residential platforms look like from the inside, both operationally and financially. Prior experience at CBRE and RealFoundations.",
   },
   {
     name: "Mike Rozovics",
